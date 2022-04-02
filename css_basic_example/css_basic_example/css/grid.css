@@ -1,0 +1,17 @@
+#app{
+	padding-top: 20px;
+	background-color: #f3f4f5;
+	display: grid;
+	/* grid-template-columns:33.3% 33.3% 33.3%  ; */
+	/* grid-template-columns:repeat(3,33%); */
+	/* grid-template-columns:repeat(2,100px 20px) ; */
+	grid-template-columns:repeat(auto-fill,100px);
+	/* grid-template-columns: 1fr 2fr 2fr 2fr 2fr; */
+	grid-template-rows:100px 100px ;
+}
+#app>div:nth-child(odd){
+	background-color: aquamarine;
+}
+#app>div:nth-child(even){
+	background-color: gold;
+}

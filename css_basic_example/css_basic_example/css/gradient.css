@@ -1,0 +1,59 @@
+#app{
+	padding-top: 20px;
+	background-color: #f3f4f5;
+}
+#app>div{
+	width: 200px;
+	height: 100px;
+	margin: auto;
+	margin-bottom: 20px;
+}
+/* 需求：盒子圆角渐变
+	1.border和box-shadow属性结合
+*/
+.gradient1{
+	border-radius: 10px;
+	box-shadow: #f2dcce -1px -1px 0px 0px;
+	border: 1px solid  #f9cfcf;
+	border-top: none;
+	border-left: none;
+	filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.3));
+}
+
+/* 
+ 需求:优惠券，右边锯齿，上下边上有镂空半圆虚线连接
+ */
+.gradient2{
+	position: relative;
+	filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.3));
+	 background: radial-gradient(circle at right top, transparent 5px,  #28A4F2 0) top left / 60px 51% no-repeat,
+	      radial-gradient(circle at right bottom, transparent 5px,  #28A4F2 0) bottom left /60px 51% no-repeat,
+	      radial-gradient(circle at left top, transparent 5px, #eee 0) top right /140px 51% no-repeat,
+	      radial-gradient(circle at left bottom, transparent 5px, #eee 0) bottom right /140px 51% no-repeat;
+}
+.gradient2::before{
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 59px;
+	height: 88px;
+	border: 1px dashed #f3f4f5;
+}
+.gradient2::after{
+	content: '';
+	position: absolute;
+	right: -5px;
+	top: 0;
+	width: 5px;
+	height: 100px;
+	background:radial-gradient(10px circle at 5px 10px,transparent 5px,#eee 5px);
+	background-size: 5px 15px;
+}
+
+/* 
+ background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+ */
+.gradient3{
+  background: repeating-radial-gradient(to top left,
+      lightpink 5px, white 10px);
+}

@@ -1,0 +1,33 @@
+/* 
+	box-shadow针对某个盒子阴影
+	drop-shadow真实世界阴影
+ */
+#app{
+	padding-top: 20px;
+	background-color: #f3f4f5;
+}
+#app>div{
+	width: 200px;
+	height: 100px;
+	margin: auto;
+	margin-bottom: 20px;
+}
+.shadow1 {
+    background-color: #fff;
+    position: relative;
+}
+.triangle {
+	position: absolute;
+	top: 20px;
+	left: -20px;
+	width: 0; height: 0;
+	overflow: hidden;
+	border: 10px solid transparent;
+	border-right-color: #fff;
+}
+.box-shadow {
+    box-shadow: 5px 5px 10px black;
+}
+.drop-shadow {
+    filter: drop-shadow(5px 5px 10px black);
+}

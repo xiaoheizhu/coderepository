@@ -1,0 +1,10 @@
+#app{
+	padding-top: 20px;
+	background-color: #f3f4f5;
+	display: flex;
+}
+.flex_box{
+	border: 1px solid #FF4500;
+	flex: 1;
+	height: 300px;
+}
